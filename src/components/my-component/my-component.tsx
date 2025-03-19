@@ -1,4 +1,4 @@
-import { Component, Host, Prop, Element } from '@stencil/core';
+import { Component, Host, Prop, Element, ComponentInterface } from '@stencil/core';
 import { h, transformTag } from '../../utils/h';
 import { format } from '../../utils/utils';
 
@@ -7,7 +7,7 @@ import { format } from '../../utils/utils';
   styleUrl: 'my-component.css',
   shadow: true,
 })
-export class MyComponent {
+export class MyComponent implements ComponentInterface {
   @Element() el: HTMLElement;
   /**
    * The first name
@@ -28,7 +28,7 @@ export class MyComponent {
     return format(this.first, this.middle, this.last);
   }
 
-  onDidRender() {
+  componentDidRender() {
     console.log('The internal component:', this.el.shadowRoot.querySelector(transformTag('my-component-internal')));
   }
 
