@@ -41,7 +41,9 @@ defineCustomElements(window, {
 })
 ```
 
-3) Augment Stencil's JSX `h()` function to catch / transform internal component tags. 
+3) Augment Stencil's JSX `h()` function to catch / transform internal component tags (have a look at this project for implementation). 
+
+**Usage** 
 
 ```tsx
 import { Component, Host, Prop, Element, h } from '@stencil/core';
@@ -54,7 +56,7 @@ import { Component, Host, Prop, Element } from '@stencil/core';
 import { h } from '../../utils/h';
 ```
 
-4) For internal dom apis, wrap tags in `transformTag()`:
+4) For internal dom apis, wrap tags in `transformTag()` (have a look at this project for implementation):
 
 ```js
 this.host.querySelector('my-component');
