@@ -23,4 +23,8 @@ export const config: Config = {
   testing: {
     browserHeadless: "shell",
   },
+  extras: {
+    scriptDataOpts: true,
+    tagNameTransform: true,
+  }
 };

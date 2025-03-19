@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-
+    <script type="module">
+      import { registerLibPrefix } from '/build/index.esm.js';
+      registerLibPrefix('my-namespace');
+    </script>
     <script type="module" src="/build/stencil-prefix-demo.esm.js"></script>
-    <script nomodule src="/build/stencil-prefix-demo.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+    <my-namespace-my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-namespace-my-component>
   </body>
 </html>
