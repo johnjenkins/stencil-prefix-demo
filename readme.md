@@ -14,8 +14,10 @@ extras: {
 }
 ```
 
-2) make / export a `registerLibPrefix()` from the index of the library. 
+2) make / export a `registerLibPrefix()` from the index of the library (have a look at this project for implementation). 
 This registers a namespace prefix within the library. 
+
+**Usage** 
 
 Browser / CDN loader:
 
